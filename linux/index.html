@@ -1,128 +1,82 @@
-
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Instalar Ruby on Rails - Linux</title>
+  <title>Instalar Ruby on Rails en Ubuntu, Linux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/elegant-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
-</head>
-<body >
+  <link href="../css/simplex.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="icon" type="image/png" href="../img/favicon.ico">
 
+
+  <meta name="description" content="Tutorial interactivo de desafíoLatam para aprender a instalar Ruby On Rails">
+
+  <meta property="og:title" content="Tutorial para aprender a instalar Ruby on Rails">
+  <meta property="og:description" content="Instala Ruby On Rails y comienza a construir la aplicación de tus sueños">
+  <meta property="og:url" content="http://instalarrails.com/">
+  <meta property="og:site_name" content="Instalar Rails"/>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45443824-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+<body>
+
+ <section class="container">
   <div style="padding-top:30px; padding-bottom:30px;background-color:white">
     <a href="/">
-     <p style="font-size:3em;font-weight:bold;padding-left:1%"><img src="../img/ruby-logo.png" style="padding-right:1%;">InstalarRails.com </p>  
+     <p style="font-size:3em;font-weight:bold;padding-left:1%">
+      <img src="../img/ruby-logo.png" style="padding-right:1%;">InstalarRails.com 
+     </p>  
    </a>
  </div>
+</section>
 
+ <div style="font-size:1.5em; background-color:#eee">
+   <div class="instruccions container">
 
- <div class="instruccions">
+    <h1  class="title-system">Instalar Ruby on Rails en Linux (16.04)</h1>
+    <h2>Guía paso a paso para instalar Ruby on Rails en Linux</h2>
+    <h4>(En caso de cualquier duda o comentario, al final de cada página hay un foro para que puedes usar) </h4>
+    <ol>
+      <li>
+        <p> Lo primero que debes hacer es abrir el terminal, para esto puedes apretar el botón "Windows" y luego escribir terminal</p>
+        <div class="text-center">
+          <img src="../img/terminal.png" alt="rails installer" class="img-responsive">
 
-  <h1  class="title-system">Instalar Ruby on Rails en Linux (14.04)</h1>
-  <h2>Guía paso a paso para instalar Ruby on Rails en Linux</h2>
-  <h4>(En caso de cualquier duda o comentario, al final de cada página hay un foro para que puedes usar) </h4>
-  <ol>
-    <li>
-      <p> Lo primero que debes hacer es abrir el terminal, para esto puedes apretar el botón "Windows" y luego escribir terminal</p>
-      <div class="text-center">
-        <img src="../img/terminal.png" alt="rails installer" class="img-responsive">
+        </div>
+      </li>
+      <li>
+       <p>Ahora vamos a instalar Ruby. Para esto debes copiar <strong>de a una </strong> cada una de las siguientes líneas y pegarlas en el terminal (shift+ctrl+v), luego presionar enter</p>
+       <pre>sudo apt-get update</pre>
+       <pre>sudo apt-get upgrade</pre>
 
-      </div>
-    </li>
-    <li>
-     <p>Ahora vamos a instalar Ruby. Para esto debes copiar <strong>de a una </strong> cada una de las siguientes líneas y pegarlas en el terminal (shift+ctrl+v), luego presionar enter</p>
-     <pre>sudo apt-get update</pre>
-     <pre>sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev</pre>
+       <pre>sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev</pre>
 
-   </li>
+     </li>
 
-   <li>
-    <p>Ahora vamos a instalar RVM, para manejar las versiones de Ruby (Ruby Version Manager), y vamos a aprovechar de configurar la versión de Ruby. Para esto, al igual que antes debemos copiar y pegar las siguientes líneas, de a una, en el terminal y luego darles enter.</p>
-    <pre>sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
-    </pre>
-    <pre>curl -L https://get.rvm.io | bash -s stable
-    </pre>
-    <pre>source ~/.rvm/scripts/rvm
-    </pre>
-    <pre>rvm install 2.3.1
-    </pre>
-    <pre>rvm use 2.3.1 --default
-    </pre>
-    <pre>ruby -v
-    </pre>
-    <pre>echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+     <p>Los siguientes pasos consiste en configurar GIT e instalar RVM para luego poder instalar Ruby y Rails </p>
+  <div class="path">
 
-    </pre>
-    <pre>gem install bundler
+    <a class="btn btn-primary" href="/">
 
-    </pre>
-  </li>
-  <li>
+      Atrás
+    </a>
 
-    <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
-    </p>
-    <pre>git config --global color.ui true
-    </pre>
-    <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
-    </pre>
-    <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
-    <pre>git config --global user.email "tucorreo@EMAIL.com"
-    </pre>
-
-    <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
-    </pre>
-  </li>
-  <li>
-
-    <p>Ahora vamos a instalar Rails</p>
-    <pre>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-    </pre>
-    <pre>sudo apt-get install -y nodejs
-    </pre>
-    <pre>gem install rails -v 4.2.7
-    </pre>
-    <pre>rails -v
-    </pre>
-    <p>Tras este último comando, en el termina debería arrojarte: # Rails 4.2.7. Si no es así, significa que omitiste algún paso de la instalación</p>
-
-  </li>
-
-  <li>
-
-    <p>Ahora vamos a configurar  PostgreSQL
-    </p>
-    <pre>sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
-    </pre>
-    <pre>wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-    </pre>
-    <pre>
-      sudo apt-get update
-    </pre>
-    <pre>sudo apt-get install postgresql-common
-    </pre>
-    <pre>sudo apt-get install postgresql-9.3 libpq-dev
-    </pre>
-
-  </li>
-</ol>
-
-<div class="path">
-
-  <a class="btn btn-blue" href="/">
-
-    Atrás
-  </a>
-
-  <a class="btn btn-blue" href="../sublime-text-linux/index.html">
-
-    Siguiente
-  </a>
-</div>
+    <a class="btn btn-primary" href="../git-mac/index.html">
+      Siguiente
+    </a>
+  </div>
 
 </div>
 

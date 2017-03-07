@@ -46,32 +46,28 @@
   <div style="font-size:1.5em; background-color:#eee">
     <div class="container">
 
-      <h1  class="title-system">Instalación de GIT </h1>
+      <h1 class="title-system">Instalación de GIT </h1>
       <ol>
-       <p> Ahora debes instalar GIT en el terminal </p>
-       <li> 
-         <pre>brew install git
-         </pre>
-       </li>        
-       <li>
-        <p>Para verificar la instalación escribe en el terminal</p>
+      <p> Primero verificamos que tengamos GIT instalado</p>
         <pre>git --version</pre>
-        <p>El resultado aproximado debería ser git version 2.x.x
-          Previous Step</p>
-
-        </li>
+        <p> Si obtenemos un error del tipo <pre> commmand not found </pre> significa que no tenemos GIT instalado </p>
+      </li>
+      <li>
+       <p> <strong> Si no tenemos GIT instalado </strong></p>
+        <p> En OSX: </p>
+         <pre>brew install git</pre>
+       <p> En Ubuntu Linux: </p>
+         <pre>sudo apt-get install git</pre>        
+       </li>        
         <li>
           <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
           </p>
 
-          <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
-          </pre>
+          <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."</pre>
           <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
-          <pre>git config --global user.email "tucorreo@EMAIL.com"
-          </pre>
+          <pre>git config --global user.email "tucorreo@EMAIL.com"</pre>
 
-          <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
-          </pre>
+          <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"</pre>
         </li>
       </ol>
 
