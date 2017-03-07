@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalar Ruby on Rails en MAC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/simplex.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="icon" type="image/png" href="../img/favicon.ico">
+
+
+  <meta name="description" content="Tutorial interactivo de desafíoLatam para aprender a instalar Ruby On Rails">
+
+  <meta property="og:title" content="Tutorial para aprender a instalar Ruby on Rails">
+  <meta property="og:description" content="Instala Ruby On Rails y comienza a construir la aplicación de tus sueños">
+  <meta property="og:url" content="http://instalarrails.com/">
+  <meta property="og:site_name" content="Instalar Rails"/>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45443824-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+<body>
+
+  <section class="container">
+   <div style="padding-top:30px; padding-bottom:30px">
+    <a href="http://www.instalarrails.com">
+     <p style="font-size:2.5em;font-weight:bold;padding-left:1%">
+      <img src="../img/ruby-logo.png" style="padding-right:1%;">
+      InstalarRails.com </p>
+    </a>
+    </div>
+  </section>
+
+  <div style="font-size:1.5em; background-color:#eee">
+  <div class="container">
+
+  <h1  class="title-system">Instalación de RVM, Ruby y Rails </h1>
+
+  <h2> RVM es una herramienta que permite tener múltiples versiones de ruby instaladas en el sistema.</h2>
+  <p>Nosotros instalaremos RVM para poder instalar Ruby</p>
+
+  <p> Las instrucciones oficiales para instalar RVM están <a href="https://rvm.io/rvm/install"> aquí </a> </p>
+
+   <p>Ahora vamos a instalar RVM, para manejar las versiones de Ruby (Ruby Version Manager), y vamos a aprovechar de configurar la versión de Ruby. Para esto, al igual que antes debemos copiar y pegar las siguientes líneas, de a una, en el terminal y luego darles enter.</p>
+
+
+  <ol style="margin-right:0px">
+ 
+    <li>
+      <p> El primer paso es instalar la clave pública necesaria, para eso necesitaremos tener instalada la herramienta gnupg (para profundizar en el tema puedes ir <a href="https://www.gnupg.org/index.html"> aquí </a> ). Para instalar la herramienta necesitamos ejecutar en el terminal: </p>
+
+      En OSX: 
+      <pre> brew install gnupg gnupg2 </pre>
+
+      En Linux:
+      <pre> sudo apt-get install gnupg gnupg2 </pre>
+    </li>
+
+    <li>
+      <p> Con gnupg2 instalado podemos agregar la llave pública necesaria ejecutando en el terminal: </p>
+      <pre> gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</pre>
+    </li>
+
+    <li>
+    <p> Con la llave pública en el llavero, podemos instalar RVM utilizando: </p>
+    <pre>\curl -sSL https://get.rvm.io | bash -s stable</pre>
+    </li>
+    
+    <li>
+    <p>Tras lo anterior, cierra el terminal y vuelve a abrirlo, y escribe:</p>
+    <pre>rvm | head -n 1</pre>
+
+    </li>
+    <li>
+      <p>Ahora instalamos ruby</p>
+    <pre>rvm use ruby --install --default</pre>
+    <p>*En versiones antiguas, esto puede demorar hasta una hora.</p>
+
+  </li>
+ <li>
+      <p>Ahora instalamos Rails 5</p>
+    <pre>gem install rails -v 5.0 --no-ri --no-rdoc</pre>
+    <p>Para verificar escribimos</p>
+    <pre>rails -v</pre>
+    <p>*El resultado esperado debería ser Rails 5.0.1 </p>
+
+  </li>
+
+  <p>*La instalación de Rails al igual que de ruby, puede demorar.</p>
+
+
+
+  </ol>
+  <section class="path" style="text-align:center">
+ <a class="btn btn-primary" href="../git-mac/index.html">
+
+                      Atrás</a>
+
+<a class="btn btn-primary" href="../sublime-text-mac/index.html">
+
+                      Siguiente</a>
+
+                     </div>
+
+<hr>
+
+</div>
+
+
+</div>
+
+
+<div>
+<div id="disqus_thread" class="container"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//instalarror.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+<footer class="closing">
+  © 2016 <a href="http://www.desafiolatam.com/">DesafíoLatam</a>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalar Ruby on Rails - Linux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/elegant-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+<body >
+
+  <div style="padding-top:30px; padding-bottom:30px;background-color:white">
+    <a href="/">
+     <p style="font-size:3em;font-weight:bold;padding-left:1%"><img src="../img/ruby-logo.png" style="padding-right:1%;">InstalarRails.com </p>  
+   </a>
+ </div>
+
+
+ <div class="instruccions">
+
+  <h1  class="title-system">Instalar Ruby on Rails en Linux (14.04)</h1>
+  <h2>Guía paso a paso para instalar Ruby on Rails en Linux</h2>
+  <h4>(En caso de cualquier duda o comentario, al final de cada página hay un foro para que puedes usar) </h4>
+  <ol>
+    <li>
+      <p> Lo primero que debes hacer es abrir el terminal, para esto puedes apretar el botón "Windows" y luego escribir terminal</p>
+      <div class="text-center">
+        <img src="../img/terminal.png" alt="rails installer" class="img-responsive">
+
+      </div>
+    </li>
+    <li>
+     <p>Ahora vamos a instalar Ruby. Para esto debes copiar <strong>de a una </strong> cada una de las siguientes líneas y pegarlas en el terminal (shift+ctrl+v), luego presionar enter</p>
+     <pre>sudo apt-get update</pre>
+     <pre>sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev</pre>
+
+   </li>
+
+   <li>
+    <p>Ahora vamos a instalar RVM, para manejar las versiones de Ruby (Ruby Version Manager), y vamos a aprovechar de configurar la versión de Ruby. Para esto, al igual que antes debemos copiar y pegar las siguientes líneas, de a una, en el terminal y luego darles enter.</p>
+    <pre>sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
+    </pre>
+    <pre>curl -L https://get.rvm.io | bash -s stable
+    </pre>
+    <pre>source ~/.rvm/scripts/rvm
+    </pre>
+    <pre>rvm install 2.3.1
+    </pre>
+    <pre>rvm use 2.3.1 --default
+    </pre>
+    <pre>ruby -v
+    </pre>
+    <pre>echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+
+    </pre>
+    <pre>gem install bundler
+
+    </pre>
+  </li>
+  <li>
+
+    <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
+    </p>
+    <pre>git config --global color.ui true
+    </pre>
+    <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
+    </pre>
+    <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
+    <pre>git config --global user.email "tucorreo@EMAIL.com"
+    </pre>
+
+    <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
+    </pre>
+  </li>
+  <li>
+
+    <p>Ahora vamos a instalar Rails</p>
+    <pre>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+    </pre>
+    <pre>sudo apt-get install -y nodejs
+    </pre>
+    <pre>gem install rails -v 4.2.7
+    </pre>
+    <pre>rails -v
+    </pre>
+    <p>Tras este último comando, en el termina debería arrojarte: # Rails 4.2.7. Si no es así, significa que omitiste algún paso de la instalación</p>
+
+  </li>
+
+  <li>
+
+    <p>Ahora vamos a configurar  PostgreSQL
+    </p>
+    <pre>sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+    </pre>
+    <pre>wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+    </pre>
+    <pre>
+      sudo apt-get update
+    </pre>
+    <pre>sudo apt-get install postgresql-common
+    </pre>
+    <pre>sudo apt-get install postgresql-9.3 libpq-dev
+    </pre>
+
+  </li>
+</ol>
+
+<div class="path">
+
+  <a class="btn btn-blue" href="/">
+
+    Atrás
+  </a>
+
+  <a class="btn btn-blue" href="../sublime-text-linux/index.html">
+
+    Siguiente
+  </a>
+</div>
+
+</div>
+
+<div>
+  <div id="disqus_thread"></div>
+  <script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//instalarror.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+
+<footer class="closing">
+  © 2016 <a href="http://www.desafiolatam.com/">DesafíoLatam</a>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

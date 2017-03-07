@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -30,16 +29,15 @@
 
   </script>
 
-
 </head>
-<body >
+<body>
 
   <section class="container">
     <div style="padding-top:30px; padding-bottom:30px">
       <a href="http://www.instalarrails.com">
        <p style="font-size:2.5em;font-weight:bold;padding-left:1%">
         <img src="../img/ruby-logo.png" style="padding-right:1%;">
-        InstalarRails.com </p>  
+        InstalarRails.com </p>
       </a>
     </div>
   </section>
@@ -49,22 +47,19 @@
     <div class="container">
 
       <h1>Instalar Ruby on Rails en Mac</h1>
-      <p> Lo primero es instalar <a href="https://itunes.apple.com/app/id497799835"> XCODE</a></p>
+      
+      Antiguamente para instalar rails en osx necesitabamos instalar xcode, pero es una herramienta muy pesada, e innecesaria para lo que necesitamos.
 
-      <p>Abre Xcode, en el menú de arriba a la izquierda. Haz click en Xcode y luego en "preferences"</p>
+      Ahora existe una forma que ocupa mucho menos espacio en nuestro disco duro y es más rápida de instalar llamada <strong> xcode command line tools. </strong>
 
-      <div style="display:block; width:100%;padding:30px;">
-        <img src="../img/xcode1.png" alt="rails installer" class="img-responsive" style="margin:auto">
-      </div>
+      Para instalar el xcode command line tools necesitamos ejecutar en nuestro terminal
 
-      <p>Luego haz click en “Locations”  y verifica tu versión de abajo</p>
+      <pre style="margin: 20px 0 20px 0"> xcode-select --install </pre>
 
-
-      <div style="display:block; width:100%;padding:30px;">
-        <img src="../img/xcode2.png" class="img-responsive" style="margin:auto">
-      </div>
+      Con Xcode instalado el siguiente paso es instalar una herramienta llamada homebrew, la cual es una administrador de paquetes que nos permite instalar y actualizar múltiples programas desde la línea de comandos.
 
       <hr>
+
       <section class="path" style="text-align:center">
        <a class="btn btn-primary" href="../mac/index.html">
 
@@ -72,7 +67,7 @@
 
         <a class="btn btn-primary" href="../home-brew/index.html">
 
-          Siguiente</a>
+          Instalar homebrew </a>
 
       </div>
       <hr>
@@ -85,7 +80,7 @@
       </div>
     </div>
     <div>
-      <div id="disqus_thread"></div>
+      <div id="disqus_thread" class="container"></div>
       <script>
 /**
 * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -109,8 +104,8 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
-
 <script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -1,81 +1,99 @@
-
 <!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Instalar Ruby on Rails - MAC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/elegant-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/pe-icon-7-stroke.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/theme.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-  <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="../css/simplex.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="icon" type="image/png" href="../img/favicon.ico">
+
+
+  <meta name="description" content="Tutorial interactivo de desafíoLatam para aprender a instalar Ruby On Rails">
+
+  <meta property="og:title" content="Tutorial para aprender a instalar Ruby on Rails">
+  <meta property="og:description" content="Instala Ruby On Rails y comienza a construir la aplicación de tus sueños">
+  <meta property="og:url" content="http://instalarrails.com/">
+  <meta property="og:site_name" content="Instalar Rails"/>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45443824-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
 </head>
-<body >
+<body>
 
 
+  <section class="container">
+   <div style="padding-top:30px; padding-bottom:30px">
+     <a href="http://www.instalarrails.com">
+       <p style="font-size:2.5em;font-weight:bold;padding-left:1%">
+        <img src="../img/ruby-logo.png" style="padding-right:1%;">
+        InstalarRails.com </p>
+      </a>
+    </div>
+  </section>
 
+  <div style="font-size:1.5em; background-color:#eee">
+    <div class="container">
 
-  <div style="padding-top:30px; padding-bottom:30px;background-color:white">
-    <a href="/">
-     <p style="font-size:3em;font-weight:bold;">InstalarRails.com </p>  
-   </a>
- </div>
+      <h1  class="title-system">Instalación de GIT </h1>
+      <ol>
+       <p> Ahora debes instalar GIT en el terminal </p>
+       <li> 
+         <pre>brew install git
+         </pre>
+       </li>        
+       <li>
+        <p>Para verificar la instalación escribe en el terminal</p>
+        <pre>git --version</pre>
+        <p>El resultado aproximado debería ser git version 2.x.x
+          Previous Step</p>
 
+        </li>
+        <li>
+          <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
+          </p>
 
- <div class="instruccions">
+          <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
+          </pre>
+          <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
+          <pre>git config --global user.email "tucorreo@EMAIL.com"
+          </pre>
 
-  <h1  class="title-system">Instalar Ruby on Rails en Mac</h1>
-  <h2>Guía paso a paso para instalar Ruby on Rails en Mac</h2>
-    <ol>
-    <li> 
-         <p> Ahora debes instalar GIT en el terminal </p>
-    <pre>brew install git
-    </pre>
+          <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
+          </pre>
+        </li>
+      </ol>
 
-      <li>
-      <p>Para verificar la instalación escribe en el terminal</p>
-      <pre>git --version</pre>
-      <p>El resultado aproximado debería ser git version 2.x.x
-Previous Step</p>
-   
-    </li>
-      <li>
+      <section class="path" style="text-align:center">
+       <a class="btn btn-primary" href="../home-brew/index.html">
 
-    <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
-    </p>
- 
-    <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
-    </pre>
-        <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
-    <pre>git config --global user.email "tucorreo@EMAIL.com"
-    </pre>
+        Atrás</a>
 
-    <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
-    </pre>
-  </li>
-     
-        
+        <a class="btn btn-primary" href="../rvm-ruby-rails-mac/index.html">
 
+          Siguiente</a>
+        </section>
 
-  </ol>
-<div class="path">
- <a class="btn btn-blue" href="../home-brew/index.html">
-                      
-                      Atrás</a>
+      <hr>
 
-<a class="btn btn-blue" href="../rvm-ruby-rails-mac/index.html">
-                      
-                      Siguiente</a>
-                     
-                     </div>
-</div>
-<div>
-<div id="disqus_thread"></div>
-<script>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="disqus_thread" class="container"></div>
+    <script>
 /**
 * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
@@ -87,12 +105,12 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 };
 */
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
+  var d = document, s = d.createElement('script');
 
-s.src = '//instalarror.disqus.com/embed.js';
+  s.src = '//instalarror.disqus.com/embed.js';
 
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
@@ -100,25 +118,12 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
 
 <footer class="closing">
-
-  © 2016 <a href="http://www.en1mes.com/">En 1 Mes </a>
-
+  © 2016 <a href="http://www.desafiolatam.com/">DesafíoLatam</a>
 </footer>
 
-<script src="js/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/skrollr.min.js"></script>
-<script src="js/flexslider.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/twitterfetcher.min.js"></script>
-<script src="js/spectragram.min.js"></script>
-<script src="js/smooth-scroll.min.js"></script>
-<script src="js/jquery.plugin.min.js"></script>
-<script src="js/placeholders.min.js"></script>
-<script src="js/countdown.min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
 </body>
 </html>
 

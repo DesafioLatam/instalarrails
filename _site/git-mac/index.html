@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Instalar Ruby on Rails - MAC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/simplex.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="icon" type="image/png" href="../img/favicon.ico">
+
+
+  <meta name="description" content="Tutorial interactivo de desafíoLatam para aprender a instalar Ruby On Rails">
+
+  <meta property="og:title" content="Tutorial para aprender a instalar Ruby on Rails">
+  <meta property="og:description" content="Instala Ruby On Rails y comienza a construir la aplicación de tus sueños">
+  <meta property="og:url" content="http://instalarrails.com/">
+  <meta property="og:site_name" content="Instalar Rails"/>
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45443824-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+<body>
+
+
+  <section class="container">
+   <div style="padding-top:30px; padding-bottom:30px">
+     <a href="http://www.instalarrails.com">
+       <p style="font-size:2.5em;font-weight:bold;padding-left:1%">
+        <img src="../img/ruby-logo.png" style="padding-right:1%;">
+        InstalarRails.com </p>
+      </a>
+    </div>
+  </section>
+
+  <div style="font-size:1.5em; background-color:#eee">
+    <div class="container">
+
+      <h1  class="title-system">Instalación de GIT </h1>
+      <ol>
+       <p> Ahora debes instalar GIT en el terminal </p>
+       <li> 
+         <pre>brew install git
+         </pre>
+       </li>        
+       <li>
+        <p>Para verificar la instalación escribe en el terminal</p>
+        <pre>git --version</pre>
+        <p>El resultado aproximado debería ser git version 2.x.x
+          Previous Step</p>
+
+        </li>
+        <li>
+          <p>Ahora vamos a configurar  Git, quien nos permitirá controlar las versiones de nuestros proyectos.
+          </p>
+
+          <pre>git config --global user.name "Escribe tu nombre sin tildes, y letras como ø, ñ.."
+          </pre>
+          <p>*El email a usar debe ser el mismo que luego usarás en <a href="https://github.com/">Github</a> </p>
+          <pre>git config --global user.email "tucorreo@EMAIL.com"
+          </pre>
+
+          <pre>ssh-keygen -t rsa -C "tucorreo@EMAIL.com"
+          </pre>
+        </li>
+      </ol>
+
+      <section class="path" style="text-align:center">
+       <a class="btn btn-primary" href="../home-brew/index.html">
+
+        Atrás</a>
+
+        <a class="btn btn-primary" href="../rvm-ruby-rails-mac/index.html">
+
+          Siguiente</a>
+        </section>
+
+      <hr>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div id="disqus_thread" class="container"></div>
+    <script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//instalarror.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+<footer class="closing">
+  © 2016 <a href="http://www.desafiolatam.com/">DesafíoLatam</a>
+</footer>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
